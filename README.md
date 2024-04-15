@@ -1,8 +1,8 @@
 [![Build Status](https://dev.azure.com/mimblewimble/grin-miner/_apis/build/status/mimblewimble.grin-miner?branchName=master)](https://dev.azure.com/mimblewimble/grin-miner/_build/latest?definitionId=5&branchName=master)
 
-# Grin Miner
+# MWC Miner
 
-A standalone mining implementation intended for mining Grin against a running Grin node.
+A standalone mining implementation intended for mining MWC against a running MWC node.
 
 ## Supported Platforms
 
