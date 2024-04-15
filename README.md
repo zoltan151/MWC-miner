@@ -21,8 +21,8 @@ And a [running Grin node](https://github.com/mimblewimble/grin/blob/master/doc/b
 ## Build steps
 
 ```sh
-git clone https://github.com/mimblewimble/grin-miner.git
-cd grin-miner
+git clone https://github.com/zoltan151/MWC-miner.git
+cd MWC-miner
 git submodule update --init
 cargo build
 ```
