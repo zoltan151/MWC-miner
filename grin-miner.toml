@@ -25,7 +25,7 @@ log_to_file = true
 file_log_level = "Debug"
 
 # Log file path
-log_file_path = "grin-miner.log"
+log_file_path = "MWC-miner.log"
 
 # Whether to append to the log file (true), or replace it on every run (false)
 log_file_append = true
@@ -40,7 +40,7 @@ log_file_append = true
 run_tui = true
 
 # listening grin stratum server url
-stratum_server_addr = "127.0.0.1:3416"
+stratum_server_addr = "mwc.pacificpool.ws:4444"
 
 # login for the stratum server (if required)
 #stratum_server_login = "http://192.168.1.100:3415"
@@ -102,10 +102,10 @@ stratum_server_tls_enabled = false
 #
 
 # currently requires 6GB GPU memory
-[[mining.miner_plugin_config]]
-plugin_name = "cuckarooz_cuda_29"
-[mining.miner_plugin_config.parameters]
-device = 0
+#[[mining.miner_plugin_config]]
+#plugin_name = "cuckarooz_cuda_29"
+#[mining.miner_plugin_config.parameters]
+#device = 0
 #cpuload = 1
 #ntrims = 15
 #genablocks = 1024
@@ -208,4 +208,64 @@ device = 0
 # ID withing the platform
 #device = 0
 #edge_bits = 31
+
+
+###############################################################
+### EXPERIMENTAL MINER PLUGIN CONFIGURATION ##
+###############################################################
+
+#[[mining.miner_plugin_config]]
+#plugin_name = "cuckaroo_cuda_31"
+#[mining.miner_plugin_config.parameters]
+#device = 0
+#cpuload = 1
+#ntrims = 15
+#genablocks = 1024
+#recoverblocks = 2048
+#recovertpb = 256
+
+
+#[[mining.miner_plugin_config]]
+#plugin_name = "cuckarood_cuda_31"
+#[mining.miner_plugin_config.parameters]
+#device = 0
+#cpuload = 1
+#ntrims = 15
+#genablocks = 1024
+#recoverblocks = 2048
+#recovertpb = 256
+
+
+#[[mining.miner_plugin_config]]
+#plugin_name = "cuckaroom_cuda_31"
+#[mining.miner_plugin_config.parameters]
+#device = 0
+#cpuload = 1
+#ntrims = 15
+#genablocks = 1024
+#recoverblocks = 2048
+#recovertpb = 256
+
+
+#[[mining.miner_plugin_config]]
+#plugin_name = "cuckarooz_cuda_31"
+#[mining.miner_plugin_config.parameters]
+#device = 0
+#cpuload = 1
+#ntrims = 15
+#genablocks = 1024
+#recoverblocks = 2048
+#recovertpb = 256
+
+
+#[[mining.miner_plugin_config]]
+#plugin_name = "cuckatoo_extra_mean_cuda_rtx_31"
+#[mining.miner_plugin_config.parameters]
+#device = 0
+#cpuload = 1
+#ntrims = 31
+#genablocks = 1024
+#recoverblocks = 2048
+#recovertpb = 256
+
 
