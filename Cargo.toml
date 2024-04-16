@@ -1,12 +1,12 @@
 [package]
-name = "grin_miner"
+name = "MWC_miner"
 version = "4.0.0"
 authors = ["Grin Developers <mimblewimble@lists.launchpad.net>"]
-description = "Mining software for Grin, supports CPU and CUDA GPUs."
+description = "Mining software for MWC, supports CPU and CUDA GPUs."
 build = "src/build/build.rs"
 license = "Apache-2.0"
-repository = "https://github.com/mimblewimble/grin-miner"
-keywords = [ "crypto", "grin", "mimblewimble", "mining"]
+repository = "https://github.com/zooltan151/MWC-miner"
+keywords = [ "crypto", "MWC", "mimblewimble", "mining"]
 autobins = false
 
 [workspace]
@@ -18,8 +18,8 @@ opencl = ["ocl_cuckatoo", "ocl_cuckaroo"]
 tui = ["cursive"]
 
 [[bin]]
-name = "grin-miner"
-path = "src/bin/grin_miner.rs"
+name = "MWC-miner"
+path = "src/bin/MWC_miner.rs"
 
 [dependencies]
 backtrace = "0.3"
@@ -32,9 +32,9 @@ slog = { version = "2", features = ["max_level_trace", "release_max_level_trace"
 term = "0.6"
 time = "0.1"
 
-grin_miner_util = { path = "./util", version = "4.0.0" }
-grin_miner_plugin = { path = "./plugin", version = "4.0.0" }
-grin_miner_config = { path = "./config", version = "4.0.0" }
+MWC_miner_util = { path = "./util", version = "4.0.0" }
+MWC_miner_plugin = { path = "./plugin", version = "4.0.0" }
+MWC_miner_config = { path = "./config", version = "4.0.0" }
 #cuckoo_miner = { path = "./cuckoo-miner", version = "4.0.0" }
 #use this alternative inclusion below to build cuda plugins
 cuckoo_miner = { path = "./cuckoo-miner", version = "4.0.0", features = ["build-cuda-plugins"]}
