@@ -9,7 +9,7 @@ workspace = ".."
 
 [dependencies]
 cuckoo_miner = { path = "../cuckoo-miner", version = "4.0.0" }
-dirs = "5"
+dirs = "2"
 grin_miner_util = { path = "../util", version = "4.0.0" }
 serde = "1"
 serde_derive = "1"
