@@ -1,6 +1,6 @@
-# Sample Server Configuration File for Grin-Miner
+# Sample Server Configuration File for MWC-Miner
 #
-# Grin-Miner will look for this file in these places: in the following
+# MWC-Miner will look for this file in these places: in the following
 # order:
 #
 # -The working directory
@@ -39,7 +39,7 @@ log_file_append = true
 # whether to run the tui
 run_tui = true
 
-# listening grin stratum server url
+# listening MWC stratum server url
 stratum_server_addr = "mwc.pacificpool.ws:4444"
 
 # login for the stratum server (if required)
@@ -52,7 +52,7 @@ stratum_server_addr = "mwc.pacificpool.ws:4444"
 stratum_server_tls_enabled = false
 
 #The directory in which mining plugins are installed
-#if not specified, grin miner will look in the directory /deps relative
+#if not specified, MWC miner will look in the directory /deps relative
 #to the executable
 
 #miner_plugin_dir = "target/debug/plugins"
