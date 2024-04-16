@@ -1,16 +1,16 @@
 [package]
-name = "grin_miner_config"
+name = "MWC_miner_config"
 version = "4.0.0"
-authors = ["Grin Developers <mimblewimble@lists.launchpad.net>"]
-description = "Configuration handling for the grin miner"
+authors = ["MWC Developers <mimblewimble@lists.launchpad.net>"]
+description = "Configuration handling for the MWC miner"
 license = "Apache-2.0"
-repository = "https://github.com/mimblewimble/grin-miner"
+repository = "https://github.com/mimblewimble/MWC-miner"
 workspace = ".."
 
 [dependencies]
 cuckoo_miner = { path = "../cuckoo-miner", version = "4.0.0" }
 dirs = "2"
-grin_miner_util = { path = "../util", version = "4.0.0" }
+MWC_miner_util = { path = "../util", version = "4.0.0" }
 serde = "1"
 serde_derive = "1"
 slog = { version = "2", features = ["max_level_trace", "release_max_level_trace"] }
