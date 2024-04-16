@@ -911,7 +911,27 @@ dependencies = [
  "num-traits 0.2.18",
 ]
 
+[[package]]
+name = "num-bigint"
+version = "0.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e63899ad0da84ce718c14936262a41cee2c79c981fc0a0e7c7beb47d5a07e8c1"
+dependencies = [
+ "num-integer",
+ "num-traits 0.2.18",
+ "rand 0.8.5",
+ "serde 1.0.197",
+]
 
+[[package]]
+name = "num-complex"
+version = "0.4.5"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "b288631d7878aaf59442cffd36910ea604ecd7745c36054328595114001c9656"
+dependencies = [
+ "num-traits 0.2.18",
+ "serde 1.0.197",
+]
 
 [[package]]
 name = "num-complex"
@@ -960,16 +980,6 @@ dependencies = [
  "serde 1.0.197",
 ]
 
-[[package]]
-name = "num-rational"
-version = "0.4.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0638a1c9d0a3c0914158145bc76cff373a75a627e6ecbfb71cbe6f453a5a19b0"
-dependencies = [
- "autocfg",
- "num-integer",
- "num-traits 0.2.18",
-]
 
 [[package]]
 name = "num-traits"
