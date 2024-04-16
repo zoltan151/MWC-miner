@@ -51,4 +51,3 @@ optional = true
 [build-dependencies]
 built = { version= "0.4", features = ["git2","chrono"] }
 
-cargo-features = ["rename-dependency"]
