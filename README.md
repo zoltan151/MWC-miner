@@ -1,4 +1,4 @@
-[![Build Status](https://dev.azure.com/mimblewimble/grin-miner/_apis/build/status/mimblewimble.grin-miner?branchName=master)](https://dev.azure.com/mimblewimble/grin-miner/_build/latest?definitionId=5&branchName=master)
+[![Build Status](https://dev.azure.com/mimblewimble/MWC-miner/_apis/build/status/mimblewimble.MWC-miner?branchName=master)](https://dev.azure.com/mimblewimble/MWC-miner/_build/latest?definitionId=5&branchName=master)
 
 # MWC Miner
 
@@ -27,7 +27,7 @@ sudo make install
 - zlib libs (zlib1g-dev or zlib-devel)
 - linux-headers (reported needed on Alpine linux)
 
-And a [running Grin node](https://github.com/mimblewimble/grin/blob/master/doc/build.md) to mine into!
+And a [running MWC node](https://github.com/mimblewimble/MWC/blob/master/doc/build.md) to mine into!
 
 ## Build steps
 
@@ -40,7 +40,7 @@ cargo build
 
 ### Building the Cuckoo-Miner plugins
 
-Grin-miner automatically builds x86_64 CPU plugins. Cuda plugins are also provided, but are
+MWC-miner automatically builds x86_64 CPU plugins. Cuda plugins are also provided, but are
 not enabled by default. To enable them, modify `Cargo.toml` as follows:
 
 ```
@@ -59,7 +59,7 @@ OpenCL plugins are not enabled by default. Run `install_ocl_plugins.sh` script t
 ./install_ocl_plugins.sh
 ```
 You must install OpenCL libraries for your operating system before.
-If you just need to compile them (for development or testing purposes) build grin-miner the following way:
+If you just need to compile them (for development or testing purposes) build MWC-miner the following way:
 
 ```
 cargo build --features opencl
@@ -73,29 +73,29 @@ See [Troubleshooting](https://github.com/mimblewimble/docs/wiki/Troubleshooting)
 
 A successful build gets you:
 
- - `target/debug/grin-miner` - the main grin-miner binary
+ - `target/debug/MWC-miner` - the main MWC-miner binary
  - `target/debug/plugins/*` - mining plugins
 
-Make sure you always run grin-miner within a directory that contains a
-`grin-miner.toml` configuration file.
+Make sure you always run MWC-miner within a directory that contains a
+`MWC-miner.toml` configuration file.
 
-While testing, put the grin-miner binary on your path like this:
+While testing, put the MWC-miner binary on your path like this:
 
 ```
-export PATH=/path/to/grin-miner/dir/target/debug:$PATH
+export PATH=/path/to/MWC-miner/dir/target/debug:$PATH
 ```
 
-You can then run `grin-miner` directly.
+You can then run `MWC-miner` directly.
 
 # Configuration
 
-Grin-miner can be further configured via the `grin-miner.toml` file.
+MWC-miner can be further configured via the `MWC-miner.toml` file.
 This file contains contains inline documentation on all configuration
 options, and should be the first point of reference.
 
 You should always ensure that this file exists in the directory from which you're
-running grin-miner.
+running MWC-miner.
 
-# Using grin-miner
+# Using MWC-miner
 
-There is a [Grin forum post](https://www.grin-forum.org/t/how-to-mine-cuckoo-30-in-grin-help-us-test-and-collect-stats/152) with further detail on how to configure grin-miner and mine grin's testnet.
+There is a [MWC forum post](https://www.MWC-forum.org/t/how-to-mine-cuckoo-30-in-MWC-help-us-test-and-collect-stats/152) with further detail on how to configure MWC-miner and mine MWC's testnet.
