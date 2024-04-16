@@ -1,9 +1,9 @@
 [package]
-name = "grin_miner_util"
+name = "MWC_miner_util"
 version = "4.0.0"
-authors = ["Grin Developers <mimblewimble@lists.launchpad.net>"]
-description = "Utilities for the grin miner"
-repository = "https://github.com/mimblewimble/grin-miner"
+authors = ["MWC Developers <mimblewimble@lists.launchpad.net>"]
+description = "Utilities for the MWC miner"
+repository = "https://github.com/mimblewimble/MWC-miner"
 license = "Apache-2.0"
 workspace = ".."
 
