@@ -46,7 +46,7 @@ sed -i -e 's/127.0.0.1/\$1/g' MWC-miner.toml\n\
 fi\n\
 ./target/release/MWC-miner' > run.sh
 
-# If the grin server is not at 127.0.0.1 provide the ip or hostname to the container
+# If the MWC server is not at 127.0.0.1 provide the ip or hostname to the container
 # by command line (i.e. docker run --name miner1 --rm -i -t miner_image 1.2.3.4)
 
 ENTRYPOINT ["sh", "run.sh"]
