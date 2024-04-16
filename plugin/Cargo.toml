@@ -1,9 +1,9 @@
 [package]
-name = "grin_miner_plugin"
+name = "MWC_miner_plugin"
 version = "4.0.0"
-authors = ["Grin Developers <mimblewimble@lists.launchpad.net>"]
-repository = "https://github.com/mimblewimble/grin-miner"
-description = "Device specific plugins for the grin miner"
+authors = ["MWC Developers <mimblewimble@lists.launchpad.net>"]
+repository = "https://github.com/mimblewimble/MWC-miner"
+description = "Device specific plugins for the MWC miner"
 license = "Apache-2.0"
 workspace = ".."
 
