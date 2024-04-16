@@ -1,4 +1,4 @@
-// Copyright 2020 The Grin Developers
+// Copyright 2020 The MWC Developers
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -22,7 +22,7 @@ use std::path::PathBuf;
 use cuckoo::{CuckooMinerError, PluginConfig};
 use toml;
 use types::MinerConfig;
-use types::{ConfigError, ConfigMembers, GlobalConfig, GrinMinerPluginConfig};
+use types::{ConfigError, ConfigMembers, GlobalConfig, MWCMinerPluginConfig};
 use util::{LoggingConfig, LOGGER};
 
 extern crate dirs;
@@ -30,8 +30,8 @@ extern crate dirs;
 /// The default file name to use when trying to derive
 /// the config file location
 
-const CONFIG_FILE_NAME: &str = "grin-miner.toml";
-const GRIN_HOME: &str = ".grin";
+const CONFIG_FILE_NAME: &str = "MWC-miner.toml";
+const MWC_HOME: &str = ".MWC";
 
 /// resolve a read parameter to a solver param, (or not if it isn't found)
 fn resolve_param(config: &mut PluginConfig, name: &str, value: u32) {
@@ -63,10 +63,10 @@ fn resolve_param(config: &mut PluginConfig, name: &str, value: u32) {
 	};
 }
 
-/// Transforms a set of grin-miner plugin configs to cuckoo-miner plugins configs
+/// Transforms a set of MWC-miner plugin configs to cuckoo-miner plugins configs
 pub fn read_configs(
 	plugin_dir: Option<PathBuf>,
-	conf_in: Vec<GrinMinerPluginConfig>,
+	conf_in: Vec<MWCMinerPluginConfig>,
 ) -> Result<Vec<PluginConfig>, CuckooMinerError> {
 	// Resolve a final plugin path, either config-provided or from the current executable path
 	let plugin_dir_absolute_path = match plugin_dir {
@@ -165,10 +165,10 @@ impl GlobalConfig {
 			self.config_file_path = Some(config_path);
 			return Ok(());
 		}
-		// Then look in {user_home}/.grin
+		// Then look in {user_home}/.MWC
 		let config_path = dirs::home_dir();
 		if let Some(mut p) = config_path {
-			p.push(GRIN_HOME);
+			p.push(MWC_HOME);
 			p.push(CONFIG_FILE_NAME);
 			if p.exists() {
 				self.config_file_path = Some(p);
