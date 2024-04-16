@@ -10,7 +10,7 @@ At present, only mining plugins for linux-x86_64 and MacOS exist. This will like
 
 ## Requirements
 
-- rust 1.30+ (use [rustup]((https://www.rustup.rs/))- i.e. `curl https://sh.rustup.rs -sSf | sh; source $HOME/.cargo/env`)
+- rust 1.30+ (use [rustup]((https://www.rustup.rs/))- i.e. `curl https://sh.rustup.rs -sSf | sh; source $HOME/.cargo/env | sudo rustup install 1.30 | sudo rustup default 1.30`)
   
 - cmake 3.2+ (for [Cuckoo mining plugins]((https://github.com/mimblewimble/cuckoo-miner))) -
   (run the following to install:
