@@ -1,4 +1,4 @@
-// Copyright 2020 The Grin Developers
+// Copyright 2020 The MWC Developers
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -61,7 +61,7 @@ impl UI {
 	/// Create a new UI
 	pub fn new(controller_tx: mpsc::Sender<ControllerMessage>) -> UI {
 		let (ui_tx, ui_rx) = mpsc::channel::<UIMessage>();
-		let mut grin_ui = UI {
+		let mut MWC_ui = UI {
 			cursive: Cursive::default(),
 			ui_tx,
 			ui_rx,
@@ -81,7 +81,7 @@ impl UI {
 
 		let mut title_string = StyledString::new();
 		title_string.append(StyledString::styled(
-			format!("Grin Miner Version {}", built_info::PKG_VERSION),
+			format!("MWC Miner Version {}", built_info::PKG_VERSION),
 			Color::Dark(BaseColor::Yellow),
 		));
 
@@ -94,20 +94,20 @@ impl UI {
 			);
 
 		//set theme
-		let mut theme = grin_ui.cursive.current_theme().clone();
+		let mut theme = MWC_ui.cursive.current_theme().clone();
 		modify_theme(&mut theme);
-		grin_ui.cursive.set_theme(theme);
-		grin_ui.cursive.add_layer(main_layer);
+		MWC_ui.cursive.set_theme(theme);
+		MWC_ui.cursive.add_layer(main_layer);
 
 		// Configure a callback (shutdown, for the first test)
-		let controller_tx_clone = grin_ui.controller_tx.clone();
-		grin_ui.cursive.add_global_callback('q', move |_| {
+		let controller_tx_clone = MWC_ui.controller_tx.clone();
+		MWC_ui.cursive.add_global_callback('q', move |_| {
 			controller_tx_clone
 				.send(ControllerMessage::Shutdown)
 				.unwrap();
 		});
-		grin_ui.cursive.set_fps(4);
-		grin_ui
+		MWC_ui.cursive.set_fps(4);
+		MWC_ui
 	}
 
 	/// Step the UI by calling into Cursive's step function, then
