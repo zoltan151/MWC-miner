@@ -165,6 +165,7 @@ impl CuckooMiner {
 					for i in 0..solver.solutions.num_sols {
 						filtered_sols.push(solver.solutions.sols[i as usize]);
 					}
+					#[allow(unused_mut)]
 					let mut filtered_sols: Vec<Solution> = filtered_sols
 						.iter()
 						.filter(|s| {
@@ -176,6 +177,7 @@ impl CuckooMiner {
 						})
 						.cloned()
 						.collect();
+					#[allow(unused_mut)]
 					for mut ss in filtered_sols.iter_mut() {
 						ss.nonce = nonce;
 						ss.id = job_id as u64;
