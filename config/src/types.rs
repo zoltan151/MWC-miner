@@ -1,4 +1,4 @@
-// Copyright 2020 The Grin Developers
+// Copyright 2020 The MWC Developers
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -22,7 +22,7 @@ use util;
 
 /// CuckooMinerPlugin configuration
 #[derive(Debug, Clone, Serialize, Deserialize)]
-pub struct GrinMinerPluginConfig {
+pub struct MWCMinerPluginConfig {
 	/// The type of plugin to load (i.e. filters on filename)
 	pub plugin_name: String,
 
@@ -30,9 +30,9 @@ pub struct GrinMinerPluginConfig {
 	pub parameters: Option<HashMap<String, u32>>,
 }
 
-impl Default for GrinMinerPluginConfig {
-	fn default() -> GrinMinerPluginConfig {
-		GrinMinerPluginConfig {
+impl Default for MWCMinerPluginConfig {
+	fn default() -> MWCMinerPluginConfig {
+		MWCMinerPluginConfig {
 			plugin_name: String::new(),
 			parameters: None,
 		}
@@ -107,7 +107,7 @@ pub struct MinerConfig {
 	pub miner_plugin_dir: Option<PathBuf>,
 
 	/// Cuckoo miner plugin configuration, one for each plugin
-	pub miner_plugin_config: Vec<GrinMinerPluginConfig>,
+	pub miner_plugin_config: Vec<MWCMinerPluginConfig>,
 }
 
 impl Default for MinerConfig {
