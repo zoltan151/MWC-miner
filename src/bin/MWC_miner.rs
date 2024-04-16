@@ -15,9 +15,9 @@
 //! Stratum client implementation, for standalone mining against a running
 //! grin node
 extern crate cuckoo_miner as cuckoo;
-extern crate grin_miner_config as config;
-extern crate grin_miner_plugin as plugin;
-extern crate grin_miner_util as util;
+extern crate MWC_miner_config as config;
+extern crate MWC_miner_plugin as plugin;
+extern crate MWC_miner_util as util;
 
 extern crate bufstream;
 extern crate native_tls;
@@ -54,7 +54,7 @@ pub mod built_info {
 pub fn info_strings() -> (String, String, String) {
 	(
 		format!(
-			"This is Grin-Miner version {}{}, built for {} by {}.",
+			"This is MWC-Miner version {}{}, built for {} by {}.",
 			built_info::PKG_VERSION,
 			built_info::GIT_VERSION.map_or_else(|| "".to_owned(), |v| format!(" (git {})", v)),
 			built_info::TARGET,
@@ -94,7 +94,7 @@ mod with_tui {
 	) {
 		// Run the UI controller.. here for now for simplicity to access
 		// everything it might need
-		println!("Starting Grin Miner in UI mode...");
+		println!("Starting MWC Miner in UI mode...");
 		println!("Waiting for solvers to shutdown...");
 		let _ = thread::Builder::new()
 			.name("ui".to_string())
@@ -117,7 +117,7 @@ fn main() {
 		panic!("Error parsing config file: {}", e);
 	});
 	println!(
-		"Starting Grin-Miner from config file at: {}",
+		"Starting MWC-Miner from config file at: {}",
 		global_config.config_file_path.unwrap().to_str().unwrap()
 	);
 	// Init logging
@@ -190,7 +190,7 @@ fn main() {
 		with_tui::start_tui(stats, cc.tx.clone(), mc.tx.clone(), tui_stopped.clone());
 
 		#[cfg(not(feature = "tui"))]
-		warn!(LOGGER, "Grin-miner was built with TUI support disabled!");
+		warn!(LOGGER, "MWC-miner was built with TUI support disabled!");
 	} else {
 		tui_stopped.store(true, Ordering::Relaxed);
 	}
