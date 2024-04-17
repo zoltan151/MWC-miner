@@ -25,6 +25,10 @@ And a [running MWC node](https://github.com/mimblewimble/MWC/blob/master/doc/bui
 ## Go to root directory ##
 cd /
 
+## Apt update and install OpenCL libraries ##
+sudo apt update
+sudo apt install ocl-icd-opencl-dev
+
 ## Ensure $PATH env variable is correctly set ##
 sudo export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 
