@@ -28,6 +28,8 @@ cd MWC-miner
 sudo sh ./install.sh
 git submodule update --init
 cargo build
+cp MWC-miner.toml target/debug/MWC-miner.toml
+cd target/debug
 ```
 
 ### Building the Cuckoo-Miner plugins
