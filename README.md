@@ -28,7 +28,6 @@ cd MWC-miner
 sudo sh ./install.sh
 git submodule update --init
 cargo build
-export PATH=./dir/target/debug:$PATH
 ```
 
 ### Building the Cuckoo-Miner plugins
