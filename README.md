@@ -23,6 +23,10 @@ And a [running MWC node](https://github.com/mimblewimble/MWC/blob/master/doc/bui
 ## Build steps
 
 ```sh
+## Elevate permissions and go to root directory ##
+sudo su
+cd /
+
 ## Install Rust ##
 curl https://sh.rustup.rs -sSf | sh; source $HOME/.cargo/env 
 
@@ -32,7 +36,6 @@ rustup default 1.59
 rustup default 1.59
 
 ## Install cmake 3.2.2 ##
-sudo su
 sudo apt remove cmake
 sudo apt-get install build-essential
 wget http://www.cmake.org/files/v3.2/cmake-3.2.2.tar.gz
