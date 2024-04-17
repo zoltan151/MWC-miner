@@ -22,6 +22,7 @@ name = "MWC-miner"
 path = "src/bin/MWC_miner.rs"
 
 [dependencies]
+lldb = "0.0.9"
 backtrace = "0.3"
 bufstream = "0.1"
 native-tls = "0.2"
