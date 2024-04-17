@@ -35,6 +35,20 @@ sudo export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/
 ## Delete existing MWC-miner directory, if it exists ##
 sudo rm -rf MWC-miner
 
+## Install CUDA toolkit and Nvidia drivers ##
+sudo apt install ubuntu-drivers-common
+sudo ubuntu-drivers devices
+sudo apt install nvidia-driver-535
+sudo apt install gcc
+wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/cuda-keyring_1.1-1_all.deb
+sudo dpkg -i cuda-keyring_1.1-1_all.deb
+sudo apt-get update
+sudo apt-get -y install cuda
+export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda-12.2/lib64\
+                         ${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+. ~/.bashrc
+
 ## Install Rust ##
 sudo curl https://sh.rustup.rs -sSf | sudo sh; source $HOME/.cargo/env 
 
