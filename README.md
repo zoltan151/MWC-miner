@@ -13,9 +13,9 @@ At present, only mining plugins for linux-x86_64 and MacOS exist. This will like
   
 - cmake 3.2+ (included in instal script) (for [Cuckoo mining plugins]((https://github.com/mimblewimble/cuckoo-miner))) -
 
-- ncurses and libs (ncurses, ncursesw5)
-- zlib libs (zlib1g-dev or zlib-devel)
-- linux-headers (reported needed on Alpine linux)
+- ncurses and libs (included in install script)
+- zlib libs (included in install script)
+- linux-headers (included in install script)
 
 And a [running MWC node](https://github.com/mimblewimble/MWC/blob/master/doc/build.md) to mine into!
 
@@ -24,6 +24,15 @@ And a [running MWC node](https://github.com/mimblewimble/MWC/blob/master/doc/bui
 ```sh
 ## Go to root directory ##
 cd /
+
+## Install the linux headers ##
+sudo apt-get install linux-headers-$(uname -r)
+
+## Install ncurses and libs ##
+sudo apt-get install libncurses5-dev libncursesw5-dev
+
+## Install zlib libs ##
+sudo apt-get install zlib1g-dev
 
 ## Apt update and install OpenCL libraries ##
 sudo apt update
