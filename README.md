@@ -54,7 +54,8 @@ sudo make install
 git clone https://github.com/zoltan151/MWC-miner.git
 cd MWC-miner
 git submodule update --init
-cargo build
+cargo build --features opencl
+./install_ocl_plugins.sh
 cp MWC-miner.toml target/debug/MWC-miner.toml
 cd target/debug
 ```
