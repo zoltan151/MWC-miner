@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-# check we're in the grin root
+# check we're in the MWC root
 if [ ! -f "LICENSE" ] ; then
-	echo "Script must be run from Grin-miner's root directory"
+	echo "Script must be run from MWC-miner's root directory"
 	exit 1
 fi
 
