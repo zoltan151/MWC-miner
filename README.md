@@ -23,6 +23,15 @@ And a [running MWC node](https://github.com/mimblewimble/MWC/blob/master/doc/bui
 ## Build steps
 
 ```sh
+## Install Rust ##
+curl https://sh.rustup.rs -sSf | sh; source $HOME/.cargo/env 
+
+## Install and switch to Rustc version 1.59  - have to repeat twice because it doesn't take the first time, for some reason. Will have to look into that later. ##
+rustup install 1.59
+rustup default 1.59
+rustup default 1.59
+
+## Clone and Build ##
 git clone https://github.com/zoltan151/MWC-miner.git
 cd MWC-miner
 sudo sh ./install.sh
