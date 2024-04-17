@@ -23,18 +23,17 @@ And a [running MWC node](https://github.com/mimblewimble/MWC/blob/master/doc/bui
 ## Build steps
 
 ```sh
-## Elevate permissions and go to root directory ##
-sudo su
+## Go to root directory ##
 cd /
 
 ## Ensure $PATH env variable is correctly set ##
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+sudo export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 
 ## Delete existing MWC-miner directory, if it exists ##
-rm -rf MWC-miner
+sudo rm -rf MWC-miner
 
 ## Install Rust ##
-curl https://sh.rustup.rs -sSf | sh; source $HOME/.cargo/env 
+sudo curl https://sh.rustup.rs -sSf | sudo sh; source $HOME/.cargo/env 
 
 ## Install and switch to Rustc version 1.59  - have to repeat twice because it doesn't take the first time, for some reason. Will have to look into that later. ##
 rustup install 1.59
@@ -44,8 +43,8 @@ rustup default 1.59
 ## Install cmake 3.2.2 ##
 sudo apt remove cmake
 sudo apt-get install build-essential
-wget http://www.cmake.org/files/v3.2/cmake-3.2.2.tar.gz
-tar -zxvf cmake-3.2.2.tar.gz
+sudo wget http://www.cmake.org/files/v3.2/cmake-3.2.2.tar.gz
+sudo tar -zxvf cmake-3.2.2.tar.gz
 cd cmake-3.2.2
 ./configure
 make
