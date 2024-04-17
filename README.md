@@ -27,6 +27,9 @@ And a [running MWC node](https://github.com/mimblewimble/MWC/blob/master/doc/bui
 sudo su
 cd /
 
+## Ensure $PATH env variable is correctly set ##
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+
 ## Delete existing MWC-miner directory, if it exists ##
 rm -rf MWC-miner
 
