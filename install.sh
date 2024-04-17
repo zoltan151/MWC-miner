@@ -8,7 +8,7 @@ tar xf cmake-3.2.2.tar.gz
 cd cmake-3.2.2
 ./configure
 make
-sudo make installmake-3.2.2.tar.gz cd cmake-3.2.2 ./configure make sudo make install
+sudo make install
 
 
 ## Compile - doesn't seem to work in a bash script ##
