@@ -1,13 +1,5 @@
 #!/bin/bash
 
-## Install Rust ##
-curl https://sh.rustup.rs -sSf | sh; source $HOME/.cargo/env 
-
-## Install and switch to Rustc version 1.59  - have to repeat twice because it doesn't take the first time, for some reason##
-rustup install 1.59
-rustup install 1.59
-rustup default 1.59
-rustup default 1.59
 
 ## Install cmake 3.2.2 ##
 sudo apt-get install build-essential
