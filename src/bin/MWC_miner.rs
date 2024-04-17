@@ -1,4 +1,4 @@
-// Copyright 2020 The Grin Developers
+// Copyright 2020 The MWC Developers
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -13,7 +13,7 @@
 // limitations under the License.
 
 //! Stratum client implementation, for standalone mining against a running
-//! grin node
+//! MWC node
 extern crate cuckoo_miner as cuckoo;
 extern crate MWC_miner_config as config;
 extern crate MWC_miner_plugin as plugin;
