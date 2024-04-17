@@ -27,6 +27,9 @@ And a [running MWC node](https://github.com/mimblewimble/MWC/blob/master/doc/bui
 sudo su
 cd /
 
+## Delete existing MWC-miner directory, if it exists ##
+rm -rf MWC-miner
+
 ## Install Rust ##
 curl https://sh.rustup.rs -sSf | sh; source $HOME/.cargo/env 
 
