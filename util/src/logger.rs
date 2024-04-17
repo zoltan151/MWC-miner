@@ -1,4 +1,4 @@
-// Copyright 2020 The Grin Developers
+// Copyright 2020 The MWC Developers
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
@@ -150,7 +150,7 @@ fn send_panic_to_log() {
 		let tui_running = *TUI_RUNNING.lock().unwrap();
 		if !tui_running {
 			eprintln!(
-				"Thread '{}' panicked with message:\n\"{}\"\nSee grin.log for further details.",
+				"Thread '{}' panicked with message:\n\"{}\"\nSee MWC.log for further details.",
 				thread, msg
 			);
 		}
