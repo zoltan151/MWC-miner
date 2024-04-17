@@ -1,4 +1,3 @@
-[![Build Status](https://dev.azure.com/mimblewimble/MWC-miner/_apis/build/status/mimblewimble.MWC-miner?branchName=master)](https://dev.azure.com/mimblewimble/MWC-miner/_build/latest?definitionId=5&branchName=master)
 
 # MWC Miner
 
@@ -54,7 +53,7 @@ sudo make install
 git clone https://github.com/zoltan151/MWC-miner.git
 cd MWC-miner
 git submodule update --init
-cargo build --features opencl --features ["build-cuda-plugins"]
+cargo build --features opencl 
 ./install_ocl_plugins.sh
 cp MWC-miner.toml target/debug/MWC-miner.toml
 cd target/debug
