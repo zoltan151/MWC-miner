@@ -15,8 +15,6 @@ sudo make installmake-3.2.2.tar.gz cd cmake-3.2.2 ./configure make sudo make ins
 
 
 ## Clone GIT and compile ##
-git clone https://github.com/zoltan151/MWC-miner.git
-cd MWC-miner
 git submodule update --init
 cargo build
 
