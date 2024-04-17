@@ -1,4 +1,4 @@
-// Copyright 2020 The Grin Developers
+// Copyright 2020 The MWC Developers
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -279,7 +279,7 @@ impl Controller {
 		let params = types::LoginParams {
 			login: login_str,
 			pass: password_str,
-			agent: "grin-miner".to_string(),
+			agent: "MWC-miner".to_string(),
 		};
 		let req = types::RpcRequest {
 			id: self.last_request_id.to_string(),
@@ -534,7 +534,7 @@ impl Controller {
 						self.stream = None;
 					} else {
 						let status = format!(
-							"Connection Status: Connected to Grin server at {}.",
+							"Connection Status: Connected to MWC server at {}.",
 							self.server_url
 						);
 						warn!(LOGGER, "{}", status);
