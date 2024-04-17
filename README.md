@@ -26,17 +26,17 @@ And a [running MWC node](https://github.com/mimblewimble/MWC/blob/master/doc/bui
 cd /
 
 ## Install the linux headers ##
-sudo apt-get install linux-headers-$(uname -r)
+sudo apt-get -y install linux-headers-$(uname -r)
 
 ## Install ncurses and libs ##
-sudo apt-get install libncurses5-dev libncursesw5-dev
+sudo apt-get -y install libncurses5-dev libncursesw5-dev
 
 ## Install zlib libs ##
-sudo apt-get install zlib1g-dev
+sudo apt-get -y install zlib1g-dev
 
 ## Apt update and install OpenCL libraries ##
 sudo apt update
-sudo apt install ocl-icd-opencl-dev
+sudo apt-get -y install ocl-icd-opencl-dev
 
 ## Ensure $PATH env variable is correctly set ##
 sudo export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
@@ -45,11 +45,11 @@ sudo export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/
 sudo rm -rf MWC-miner
 
 ## Install CUDA toolkit and Nvidia drivers ##
-sudo apt install ubuntu-drivers-common
+sudo apt-get -y install ubuntu-drivers-common
 sudo ubuntu-drivers devices
-sudo apt install nvidia-driver-535
-sudo apt install gcc
-sudo apt-get install cuda-11-7
+sudo apt-get -y install nvidia-driver-535
+sudo apt-get -y install gcc
+sudo apt-get -y install cuda-11-7
 
 
 ## Install Rust ##
@@ -61,8 +61,8 @@ rustup default 1.59
 rustup default 1.59
 
 ## Install cmake 3.2.2 ##
-sudo apt remove cmake
-sudo apt-get install build-essential
+sudo apt-get -y remove cmake
+sudo apt-get -y install build-essential
 sudo wget http://www.cmake.org/files/v3.2/cmake-3.2.2.tar.gz
 sudo tar -zxvf cmake-3.2.2.tar.gz
 cd cmake-3.2.2
