@@ -1,4 +1,4 @@
-// Copyright 2020 The Grin Developers
+// Copyright 2020 The MWC Developers
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -29,10 +29,10 @@ extern crate toml;
 extern crate slog;
 
 extern crate cuckoo_miner as cuckoo;
-extern crate grin_miner_util as util;
+extern crate MWC_miner_util as util;
 
 mod config;
 mod types;
 
 pub use config::read_configs;
-pub use types::{ConfigError, ConfigMembers, GlobalConfig, GrinMinerPluginConfig, MinerConfig};
+pub use types::{ConfigError, ConfigMembers, GlobalConfig, MWCMinerPluginConfig, MinerConfig};
