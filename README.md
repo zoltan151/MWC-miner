@@ -31,10 +31,18 @@ rustup install 1.59
 rustup default 1.59
 rustup default 1.59
 
+## Install cmake 3.2.2 ##
+sudo apt-get install build-essential
+wget http://www.cmake.org/files/v3.2/cmake-3.2.2.tar.gz
+tar xf cmake-3.2.2.tar.gz
+cd cmake-3.2.2
+./configure
+make
+sudo make install
+
 ## Clone and Build ##
 git clone https://github.com/zoltan151/MWC-miner.git
 cd MWC-miner
-sudo sh ./install.sh
 git submodule update --init
 cargo build
 cp MWC-miner.toml target/debug/MWC-miner.toml
