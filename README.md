@@ -26,6 +26,8 @@ And a [running MWC node](https://github.com/mimblewimble/MWC/blob/master/doc/bui
 git clone https://github.com/zoltan151/MWC-miner.git
 cd MWC-miner
 sudo sh ./install.sh
+git submodule update --init
+cargo build
 ```
 
 ### Building the Cuckoo-Miner plugins
