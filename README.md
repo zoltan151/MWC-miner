@@ -49,14 +49,7 @@ sudo apt install ubuntu-drivers-common
 sudo ubuntu-drivers devices
 sudo apt install nvidia-driver-535
 sudo apt install gcc
-wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-ubuntu2004.pin
-sudo mv cuda-ubuntu2004.pin /etc/apt/preferences.d/cuda-repository-pin-600
-sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/3bf863cc.pub
-sudo add-apt-repository "deb http://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/ /"
-sudo apt update
-## sudo apt install cuda-toolkit-11-6 --- this isn't working anymore due to a dependency that is no longer available. Use the below installer instead. ##
-wget https://developer.download.nvidia.com/compute/cuda/11.1.0/local_installers/cuda_11.1.0_455.23.05_linux.run
-sudo sh cuda_11.1.0_455.23.05_linux.run
+sudo apt-get install cuda-11-7
 
 
 ## Install Rust ##
