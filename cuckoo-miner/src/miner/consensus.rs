@@ -1,4 +1,4 @@
-// Copyright 2020 The Grin Developers
+// Copyright 2020 The MWC Developers
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,13 +12,13 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-/// Difficulty calculation as from Grin
+/// Difficulty calculation as from MWC
 use blake2::blake2b::Blake2b;
 use byteorder::{BigEndian, ByteOrder};
 use std::cmp::{max, min};
 use std::fmt;
 
-// constants from grin
+// constants from MWC
 const PROOF_SIZE: usize = 42;
 
 /// The difficulty is defined as the maximum target divided by the block hash.
@@ -90,7 +90,7 @@ impl Proof {
 		min(diff, <u64>::max_value() as u128) as u64
 	}
 
-	/// Hash, as in Grin
+	/// Hash, as in MWC
 	fn hash(&self) -> Hash {
 		let nonce_bits = self.edge_bits as usize;
 		let mut bitvec = BitVec::new(nonce_bits * PROOF_SIZE);
