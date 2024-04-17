@@ -14,7 +14,7 @@ make
 sudo make installmake-3.2.2.tar.gz cd cmake-3.2.2 ./configure make sudo make install
 
 
-## Clone GIT and compile - doesn't seem to work in a bash script ##
+## Compile - doesn't seem to work in a bash script ##
 #git submodule update --init
 #cargo build
 
