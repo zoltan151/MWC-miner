@@ -165,15 +165,15 @@ stratum_server_tls_enabled = false
 #as above, memory requirements are tight, don't drive a display
 #off the same card while trying to mine with an 11GB card
 
-#[[mining.miner_plugin_config]]
-#plugin_name = "cuckatoo_mean_cuda_rtx_31"
-#[mining.miner_plugin_config.parameters]
-#device = 0
-#cpuload = 1
-#ntrims = 31
-#genablocks = 1024
-#recoverblocks = 2048
-#recovertpb = 256
+[[mining.miner_plugin_config]]
+plugin_name = "cuckatoo_mean_cuda_rtx_31"
+[mining.miner_plugin_config.parameters]
+device = 0
+cpuload = 1
+ntrims = 31
+genablocks = 1024
+recoverblocks = 2048
+recovertpb = 256
 
 #the C32 reference miner requires 20GB of memory
 #runs on the RTX Titan with 24GB
