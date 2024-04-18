@@ -103,7 +103,7 @@ sudo ubuntu-drivers devices
 
 ## Install OpenSSL 1.1.1 and set as default ##
 cd /
-# sudo apt-get -y remove openssl
+sudo apt-get -y remove openssl
 git clone --depth 1 --branch OpenSSL_1_1_1g https://github.com/openssl/openssl.git
 cd openssl
 ./config zlib '-Wl,-rpath,$(LIBRPATH)'
@@ -111,6 +111,7 @@ make
 sudo make install
 sudo ldconfig -v
 source ~/.bashrc
+exec bash
 sudo apt-get -y install libssl-dev
 
 ## Clone and Build ##
