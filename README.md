@@ -44,26 +44,8 @@ sudo export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/
 ## Delete existing MWC-miner directory, if it exists ##
 sudo rm -rf MWC-miner
 
-## Install CUDA toolkit and Nvidia drivers ##
-sudo apt-get -y install ubuntu-drivers-common
-sudo ubuntu-drivers devices
-
-#sudo apt-key adv --fetch-keys http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub
-#sudo bash -c 'echo "deb [allow-insecure=yes] http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64 /" > /etc/apt/sources.list.d/cuda.list'
-#sudo bash -c 'echo "deb [allow-insecure=yes] http://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1804/x86_64 /" > /etc/apt/sources.list.d/cuda_learn.list'
-#sudo apt update
-#sudo apt install cuda-10-1
-#sudo apt install libcudnn7
-wget https://developer.download.nvidia.com/compute/cuda/10.2/Prod/local_installers/cuda_10.2.89_440.33.01_linux.run
-sudo sh cuda_10.2.89_440.33.01_linux.run
-export PATH=/usr/local/cuda-10.2/bin:/usr/local/cuda-10.2/NsightCompute-2019.1${PATH:+:${PATH}}
-export LD_LIBRARY_PATH=/usr/local/cuda-10.2/lib64\${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
-# sudo apt-get -y install nvidia-driver-535
-# sudo add-apt-repository ppa:graphics-drivers
-
 ## Install OpenSSL ##
 sudo apt-get -y install libssl-dev
-
 
 ## Install Rust ##
 sudo curl https://sh.rustup.rs -sSf | sudo sh; source $HOME/.cargo/env 
@@ -99,6 +81,21 @@ wget http://mirrors.kernel.org/ubuntu/pool/universe/g/gcc-8/g++-8_8.4.0-3ubuntu2
 sudo apt install ./libstdc++-8-dev_8.4.0-3ubuntu2_amd64.deb ./g++-8_8.4.0-3ubuntu2_amd64.deb
 sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-8 8
 
+## Install CUDA toolkit and Nvidia drivers ##
+#sudo apt-key adv --fetch-keys http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub
+#sudo bash -c 'echo "deb [allow-insecure=yes] http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64 /" > /etc/apt/sources.list.d/cuda.list'
+#sudo bash -c 'echo "deb [allow-insecure=yes] http://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1804/x86_64 /" > /etc/apt/sources.list.d/cuda_learn.list'
+#sudo apt update
+#sudo apt install cuda-10-1
+#sudo apt install libcudnn7
+wget https://developer.download.nvidia.com/compute/cuda/10.2/Prod/local_installers/cuda_10.2.89_440.33.01_linux.run
+sudo sh cuda_10.2.89_440.33.01_linux.run
+export PATH=/usr/local/cuda-10.2/bin:/usr/local/cuda-10.2/NsightCompute-2019.1${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda-10.2/lib64\${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+# sudo apt-get -y install nvidia-driver-535
+# sudo add-apt-repository ppa:graphics-drivers
+sudo apt-get -y install ubuntu-drivers-common
+sudo ubuntu-drivers devices
 
 ## Clone and Build ##
 cd /
