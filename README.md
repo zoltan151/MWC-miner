@@ -71,6 +71,7 @@ make
 sudo make install
 
 ## Clone and Build ##
+cd /
 git clone https://github.com/zoltan151/MWC-miner.git
 cd MWC-miner
 git submodule update --init
