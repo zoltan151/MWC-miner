@@ -11,7 +11,7 @@ At present, only mining plugins for linux-x86_64 and MacOS exist. This will like
 
 - rust 1.59 (included in install script)
   
-- cmake 3.2+ (included in instal script) (for [Cuckoo mining plugins]((https://github.com/mimblewimble/cuckoo-miner))) -
+- cmake 3.2+ (included in install script) (for [Cuckoo mining plugins]((https://github.com/mimblewimble/cuckoo-miner))) -
 
 - ncurses and libs (included in install script)
 - zlib libs (included in install script)
