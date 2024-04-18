@@ -44,11 +44,15 @@ sudo export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/
 ## Delete existing MWC-miner directory, if it exists ##
 sudo rm -rf MWC-miner
 
+## Install GNU / GCC ##
+sudo apt install software-properties-common
+sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+sudo apt install gcc-7 g++-7 gcc-8 g++-8
+
 ## Install CUDA toolkit and Nvidia drivers ##
 sudo apt-get -y install ubuntu-drivers-common
 sudo ubuntu-drivers devices
 sudo apt-get -y install nvidia-driver-535
-sudo apt-get -y install gcc-8
 sudo add-apt-repository ppa:graphics-drivers
 sudo apt-key adv --fetch-keys http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub
 sudo bash -c 'echo "deb http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64 /" > /etc/apt/sources.list.d/cuda.list'
