@@ -67,4 +67,4 @@ set(CUDA_FIND_QUIETLY TRUE)
 
   # Prevent compilation issues between recent gcc versions and old CUDA versions
   list(APPEND CUDA_NVCC_FLAGS "-D_FORCE_INLINES")
-endif()
+##endif()
