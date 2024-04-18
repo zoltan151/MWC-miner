@@ -55,6 +55,8 @@ sudo bash -c 'echo "deb http://developer.download.nvidia.com/compute/machine-lea
 sudo apt update
 sudo apt install cuda-10-1
 sudo apt install libcudnn7
+wget https://developer.download.nvidia.com/compute/cuda/10.2/Prod/local_installers/cuda_10.2.89_440.33.01_linux.run
+sudo sh cuda_10.2.89_440.33.01_linux.run
 
 ## Install OpenSSL ##
 sudo apt-get -y install libssl-dev
