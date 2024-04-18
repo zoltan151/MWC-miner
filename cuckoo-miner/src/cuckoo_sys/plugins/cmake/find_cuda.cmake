@@ -7,7 +7,7 @@ endif()
 
 set(CUDA_FIND_QUIETLY TRUE)
 ## find_package(CUDA 4)
-find_package(CUDAToolkit)
+#find_package(CUDAToolkit)
 
 ## if(CUDA_FOUND)
 ## 	message(STATUS "Found CUDA Toolkit v${CUDA_VERSION_STRING}")
