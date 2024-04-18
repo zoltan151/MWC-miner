@@ -25,6 +25,9 @@ And a [running MWC node](https://github.com/mimblewimble/MWC/blob/master/doc/bui
 ## Go to root directory ##
 cd /
 
+## Apt update ##
+sudo apt-get -y update
+
 ## Install the linux headers ##
 sudo apt-get -y install linux-headers-$(uname -r)
 
@@ -35,7 +38,6 @@ sudo apt-get -y install libncurses5-dev libncursesw5-dev
 sudo apt-get -y install zlib1g-dev
 
 ## Apt update and install OpenCL libraries ##
-sudo apt update
 sudo apt-get -y install ocl-icd-opencl-dev
 
 ## Ensure $PATH env variable is correctly set ##
