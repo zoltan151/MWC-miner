@@ -21,7 +21,10 @@ And a [running MWC node](https://github.com/mimblewimble/MWC/blob/master/doc/bui
 
 ## Build steps
 
+## Step 1:
+
 ```sh
+
 ## Go to root directory ##
 cd /
 
@@ -112,6 +115,16 @@ sudo make install
 sudo ldconfig -v
 source ~/.bashrc
 exec bash
+
+```
+
+
+## Step 2
+
+```sh
+
+## Install libssl-dev ##
+sudo apt-get -y update
 sudo apt-get -y install libssl-dev
 
 ## Install pkg-config ##
