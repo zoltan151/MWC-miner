@@ -51,6 +51,9 @@ sudo apt-get -y install nvidia-driver-535
 sudo apt-get -y install gcc
 sudo apt-get -y install cuda-11-7
 
+## Install OpenSSL ##
+sudo apt-get -y install libssl-dev
+
 
 ## Install Rust ##
 sudo curl https://sh.rustup.rs -sSf | sudo sh; source $HOME/.cargo/env 
