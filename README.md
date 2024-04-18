@@ -44,12 +44,11 @@ sudo apt-get -y install ocl-icd-opencl-dev
 sudo export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 
 ## Delete existing MWC-miner directory, if it exists ##
+cd /
 sudo rm -rf MWC-miner
 
-## Install OpenSSL ##
-sudo apt-get -y install libssl-dev
-
 ## Install Rust ##
+cd /
 sudo curl https://sh.rustup.rs -sSf | sudo sh; source $HOME/.cargo/env 
 
 ## Install and switch to Rustc version 1.59  - have to repeat twice because it doesn't take the first time, for some reason. Will have to look into that later. ##
@@ -58,6 +57,7 @@ rustup default 1.59
 rustup default 1.59
 
 ## Install cmake 3.2.2 ##
+cd /
 sudo apt-get -y remove cmake
 sudo apt-get -y install build-essential
 sudo wget http://www.cmake.org/files/v3.2/cmake-3.2.2.tar.gz
@@ -68,6 +68,7 @@ make
 sudo make install
 
 ## Install GNU / GCC ##
+cd /
 sudo apt-get -y update
 sudo apt-get -y install -y build-essential
 sudo apt-get -y install g++
@@ -84,6 +85,7 @@ sudo apt-get -y install ./libstdc++-8-dev_8.4.0-3ubuntu2_amd64.deb ./g++-8_8.4.0
 sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-8 8
 
 ## Install CUDA toolkit and Nvidia drivers ##
+cd /
 #sudo apt-key adv --fetch-keys http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub
 #sudo bash -c 'echo "deb [allow-insecure=yes] http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64 /" > /etc/apt/sources.list.d/cuda.list'
 #sudo bash -c 'echo "deb [allow-insecure=yes] http://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1804/x86_64 /" > /etc/apt/sources.list.d/cuda_learn.list'
@@ -98,6 +100,17 @@ export LD_LIBRARY_PATH=/usr/local/cuda-10.2/lib64\${LD_LIBRARY_PATH:+:${LD_LIBRA
 # sudo add-apt-repository ppa:graphics-drivers
 sudo apt-get -y install ubuntu-drivers-common
 sudo ubuntu-drivers devices
+
+## Install OpenSSL ##
+cd /
+sudo apt-get -y remove openssl
+wget https://www.openssl.org/source/openssl-1.1.1w.tar.gz
+tar xvzf openssl-1.1.1w.tar.gz
+cd openssl-1.1.1w
+./config
+make
+sudo make install
+sudo apt-get -y install libssl-dev
 
 ## Clone and Build ##
 cd /
