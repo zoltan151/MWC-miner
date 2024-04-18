@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.2)
 project (CuckooMinerPlugins)
 
+include_directories(${CMAKE_CUDA_TOOLKIT_INCLUDE_DIRECTORIES})
+
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/plugins)
 set (CMAKE_CXX_FLAGS "--std=c++11")
 
@@ -36,6 +38,7 @@ endfunction()
 function (build_cuda_target sources target props)
 ##	if (BUILD_CUDA_PLUGINS)
 		include("cmake/find_cuda.cmake")
+                include_directories(${CMAKE_CUDA_TOOLKIT_INCLUDE_DIRECTORIES})
 #		if (CUDA_FOUND)
 			set (CUDA_PROPAGATE_HOST_FLAGS ON)
 			cuda_add_library (${target} SHARED ${sources} OPTIONS "${props} ${PLUGIN_BUILD_FLAGS}")
