@@ -31,6 +31,12 @@ sudo apt-get -y install zlib1g-dev
 ## Apt update and install OpenCL libraries ##
 sudo apt-get -y install ocl-icd-opencl-dev
 
+## Install OpenCL drivers ##
+sudo apt-get -y install alsa-utils
+sudo apt-get -y install intel-opencl-icd
+sudo add-apt-repository ppa:graphics-drivers/ppa
+sudo ubuntu-drivers autoinstall
+
 ## Ensure $PATH env variable is correctly set ##
 sudo export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 
