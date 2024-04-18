@@ -134,7 +134,7 @@ git submodule update --init
 cargo build --release --features opencl --verbose
 ./install_ocl_plugins.sh
 cp MWC-miner.toml target/release/MWC-miner.toml
-cd target/debug
+cd target/release
 ```
 
 
