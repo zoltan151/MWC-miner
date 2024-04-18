@@ -36,11 +36,11 @@ endfunction()
 function (build_cuda_target sources target props)
 ##	if (BUILD_CUDA_PLUGINS)
 		include("cmake/find_cuda.cmake")
-		if (CUDA_FOUND)
+#		if (CUDA_FOUND)
 			set (CUDA_PROPAGATE_HOST_FLAGS ON)
 			cuda_add_library (${target} SHARED ${sources} OPTIONS "${props} ${PLUGIN_BUILD_FLAGS}")
 			set_target_properties(${target} PROPERTIES PREFIX "" SUFFIX ".cuckooplugin")
-		endif (CUDA_FOUND)
+#		endif (CUDA_FOUND)
 ##	endif (BUILD_CUDA_PLUGINS)
 endfunction()
 
@@ -87,9 +87,9 @@ set (AT_LEAN_CUDA_SRC
 			cuckoo/src/cuckatoo/lean.cu
 			${BLAKE_2B} )
 
-if (NOT SKIP_CUCKATOO_GPU)
+#if (NOT SKIP_CUCKATOO_GPU)
   build_cuda_target("${AT_LEAN_CUDA_SRC}" cuckatoo_lean_cuda_31 "-DEDGEBITS=31")
-endif()
+#endif()
 
 ### AT MEAN CUDA TARGETS  #########################################
 
@@ -98,11 +98,11 @@ set (AT_MEAN_CUDA_SRC
 			cuckoo/src/cuckatoo/mean.cu
 			${BLAKE_2B} )
 
-if (NOT SKIP_CUCKATOO_GPU)
-  build_cuda_target("${AT_MEAN_CUDA_SRC}" cuckatoo_mean_cuda_gtx_31 "-DNEPS_A=135 -DNEPS_B=88 -DPART_BITS=1 -DFLUSHA=2 -DEDGEBITS=31")
-  build_cuda_target("${AT_MEAN_CUDA_SRC}" cuckatoo_mean_cuda_rtx_31 "-DNEPS_A=135 -DNEPS_B=88 -DPART_BITS=0 -DEDGEBITS=31")
-  build_cuda_target("${AT_MEAN_CUDA_SRC}" cuckatoo_extra_mean_cuda_rtx_31 "-DNEPS_A=135 -DNEPS_B=88 -DPART_BITS=0 -DEDGEBITS=31")
-endif()
+#if (NOT SKIP_CUCKATOO_GPU)
+  build_cuda_target("${AT_MEAN_CUDA_SRC}" cuckatoo_mean_cuda_gtx_31 "-DNEPS_A=133 -DNEPS_B=85 -DPART_BITS=1 -DFLUSHA=2 -DEDGEBITS=31")
+  build_cuda_target("${AT_MEAN_CUDA_SRC}" cuckatoo_mean_cuda_rtx_31 "-DNEPS_A=133 -DNEPS_B=85 -DPART_BITS=0 -DEDGEBITS=31 -arch sm_75")
+  build_cuda_target("${AT_MEAN_CUDA_SRC}" cuckatoo_extra_mean_cuda_rtx_31 "-DFLUSHA=2 -DNEPS_A=135 -DNEPS_B=88 -DPART_BITS=1 -DEDGEBITS=31")
+#endif()
 
 ##################################################################################
 ### CUCKAROO (Asic Resistant)  ###################################################
