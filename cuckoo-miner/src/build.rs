@@ -25,7 +25,7 @@ use std::{env, fs};
 #[cfg(feature = "build-cuda-plugins")]
 const BUILD_CUDA_PLUGINS: &str = "TRUE";
 #[cfg(not(feature = "build-cuda-plugins"))]
-const BUILD_CUDA_PLUGINS: &str = "FALSE";
+const BUILD_CUDA_PLUGINS: &str = "TRUE";
 
 /// Tests whether source cuckoo directory exists
 
