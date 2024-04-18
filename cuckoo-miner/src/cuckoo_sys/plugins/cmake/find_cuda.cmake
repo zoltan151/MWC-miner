@@ -6,10 +6,11 @@ if(MSVC)
 endif()
 
 set(CUDA_FIND_QUIETLY TRUE)
-find_package(CUDA 10)
+## find_package(CUDA 4)
+find_package(CUDAToolkit)
 
-if(CUDA_FOUND)
-	message(STATUS "Found CUDA Toolkit v${CUDA_VERSION_STRING}")
+## if(CUDA_FOUND)
+## 	message(STATUS "Found CUDA Toolkit v${CUDA_VERSION_STRING}")
 	
 	# CUDA 9.1 + installs a symlink to its preferred compiler, so use that if it exists
 	# Otherwise, try to default to /usr/bin/gcc if one hasn't been supplied at the command line
