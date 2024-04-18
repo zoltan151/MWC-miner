@@ -48,8 +48,14 @@ sudo rm -rf MWC-miner
 sudo apt-get -y install ubuntu-drivers-common
 sudo ubuntu-drivers devices
 sudo apt-get -y install nvidia-driver-535
-sudo apt-get -y install gcc
-sudo apt-get -y install cuda-11-7
+sudo apt-get -y install gcc-8
+sudo add-apt-repository ppa:graphics-drivers
+sudo apt-key adv --fetch-keys http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub
+sudo bash -c 'echo "deb http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64 /" > /etc/apt/sources.list.d/cuda.list'
+sudo bash -c 'echo "deb http://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1804/x86_64 /" > /etc/apt/sources.list.d/cuda_learn.list'
+sudo apt update
+sudo apt install cuda-10-1
+sudo apt install libcudnn7
 
 ## Install OpenSSL ##
 sudo apt-get -y install libssl-dev
