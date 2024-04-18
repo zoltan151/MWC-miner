@@ -114,6 +114,10 @@ source ~/.bashrc
 exec bash
 sudo apt-get -y install libssl-dev
 
+## Install pkg-config ##
+sudo apt-get -y update
+sudo apt-get -y install pkg-config
+
 ## Clone and Build ##
 cd /
 git clone https://github.com/zoltan151/MWC-miner.git
