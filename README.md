@@ -93,10 +93,10 @@ wget https://developer.download.nvidia.com/compute/cuda/10.2/Prod/local_installe
 sudo sh cuda_10.2.89_440.33.01_linux.run
 export PATH=/usr/local/cuda-10.2/bin:/usr/local/cuda-10.2/NsightCompute-2019.1${PATH:+:${PATH}}
 export LD_LIBRARY_PATH=/usr/local/cuda-10.2/lib64\${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
-# sudo apt-get -y install nvidia-driver-535
-# sudo add-apt-repository ppa:graphics-drivers
+sudo add-apt-repository ppa:graphics-drivers
 sudo apt-get -y install ubuntu-drivers-common
-sudo ubuntu-drivers devices
+sudo apt-get -y install nvidia-driver-535
+#sudo ubuntu-drivers devices
 
 ## Install OpenSSL 1.1.1 and set as default ##
 cd /
