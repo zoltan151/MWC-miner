@@ -61,8 +61,8 @@ set (AT_LEAN_CPU_SRC
 			cuckoo/src/cuckatoo/lean.cpp
 			${BLAKE_2B})
 
-build_cpu_target("${AT_LEAN_CPU_SRC}" cuckatoo_lean_cpu_compat_31 "-mno-avx2 -DNSIPHASH=4 -DATOMIC -DEDGEBITS=31")
-build_cpu_target("${AT_LEAN_CPU_SRC}" cuckatoo_lean_cpu_avx2_31 "-mavx2 -DNSIPHASH=8 -DATOMIC -DEDGEBITS=31")
+#build_cpu_target("${AT_LEAN_CPU_SRC}" cuckatoo_lean_cpu_compat_31 "-mno-avx2 -DNSIPHASH=4 -DATOMIC -DEDGEBITS=31")
+#build_cpu_target("${AT_LEAN_CPU_SRC}" cuckatoo_lean_cpu_avx2_31 "-mavx2 -DNSIPHASH=8 -DATOMIC -DEDGEBITS=31")
 
 ### AT MEAN CPU TARGETS  #########################################
 
@@ -77,8 +77,8 @@ set (AT_MEAN_CPU_SRC
 			cuckoo/src/cuckatoo/mean.cpp
 			${BLAKE_2B})
 
-build_cpu_target("${AT_MEAN_CPU_SRC}" cuckatoo_mean_cpu_compat_31 "-mno-avx2 -DXBITS=8 -DNSIPHASH=4 -DEXPANDROUND=8 -DCOMPRESSROUND=22 -DSAVEEDGES -DEDGEBITS=31")
-build_cpu_target("${AT_MEAN_CPU_SRC}" cuckatoo_mean_cpu_avx2_31 "-mavx2 -DXBITS=8 -DNSIPHASH=8 -DEXPANDROUND=8 -DCOMPRESSROUND=22 -DSAVEEDGES -DEDGEBITS=31")
+#build_cpu_target("${AT_MEAN_CPU_SRC}" cuckatoo_mean_cpu_compat_31 "-mno-avx2 -DXBITS=8 -DNSIPHASH=4 -DEXPANDROUND=8 -DCOMPRESSROUND=22 -DSAVEEDGES -DEDGEBITS=31")
+#build_cpu_target("${AT_MEAN_CPU_SRC}" cuckatoo_mean_cpu_avx2_31 "-mavx2 -DXBITS=8 -DNSIPHASH=8 -DEXPANDROUND=8 -DCOMPRESSROUND=22 -DSAVEEDGES -DEDGEBITS=31")
 
 ### AT LEAN CUDA TARGETS  #########################################
 
@@ -122,8 +122,8 @@ set (AR_CPU_SRC
 
 ### AR CPU TARGETS #########################################
 
-build_cpu_target("${AR_CPU_SRC}" cuckaroo_cpu_compat_31 "-mno-avx2 -DNSIPHASH=4 -DEDGEBITS=31 -DSAVEEDGES")
-build_cpu_target("${AR_CPU_SRC}" cuckaroo_cpu_avx2_31 "-mavx2 -DNSIPHASH=8 -DEDGEBITS=31 -DSAVEEDGES")
+#build_cpu_target("${AR_CPU_SRC}" cuckaroo_cpu_compat_31 "-mno-avx2 -DNSIPHASH=4 -DEDGEBITS=31 -DSAVEEDGES")
+#build_cpu_target("${AR_CPU_SRC}" cuckaroo_cpu_avx2_31 "-mavx2 -DNSIPHASH=8 -DEDGEBITS=31 -DSAVEEDGES")
 
 ### AR CUDA TARGETS #########################################
 
@@ -153,8 +153,8 @@ set (AR2_CPU_SRC
 
 ### AR CPU TARGETS #########################################
 
-build_cpu_target("${AR2_CPU_SRC}" cuckarood_cpu_compat_31 "-mno-avx2 -DNSIPHASH=4 -DEDGEBITS=31 -DSAVEEDGES")
-build_cpu_target("${AR2_CPU_SRC}" cuckarood_cpu_avx2_31 "-mavx2 -DNSIPHASH=8 -DEDGEBITS=31 -DSAVEEDGES")
+#build_cpu_target("${AR2_CPU_SRC}" cuckarood_cpu_compat_31 "-mno-avx2 -DNSIPHASH=4 -DEDGEBITS=31 -DSAVEEDGES")
+#build_cpu_target("${AR2_CPU_SRC}" cuckarood_cpu_avx2_31 "-mavx2 -DNSIPHASH=8 -DEDGEBITS=31 -DSAVEEDGES")
 
 ### AR CUDA TARGETS #########################################
 
@@ -184,8 +184,8 @@ set (AR2_CPU_SRC
 ### AR CPU TARGETS #########################################
 
 if (NOT SKIP_CUCKAROOM_CPU)
-  build_cpu_target("${AR2_CPU_SRC}" cuckaroom_cpu_compat_31 "-mno-avx2 -DNSIPHASH=4 -DEDGEBITS=31 -DSAVEEDGES")
-  build_cpu_target("${AR2_CPU_SRC}" cuckaroom_cpu_avx2_31 "-mavx2 -DNSIPHASH=8 -DEDGEBITS=31 -DSAVEEDGES")
+  #build_cpu_target("${AR2_CPU_SRC}" cuckaroom_cpu_compat_31 "-mno-avx2 -DNSIPHASH=4 -DEDGEBITS=31 -DSAVEEDGES")
+  #build_cpu_target("${AR2_CPU_SRC}" cuckaroom_cpu_avx2_31 "-mavx2 -DNSIPHASH=8 -DEDGEBITS=31 -DSAVEEDGES")
 endif()
 
 ### AR CUDA TARGETS #########################################
@@ -217,8 +217,8 @@ set (AR2_CPU_SRC
 ### AR CPU TARGETS #########################################
 
 if (NOT SKIP_CUCKAROOZ_CPU)
-  build_cpu_target("${AR2_CPU_SRC}" cuckarooz_cpu_compat_31 "-mno-avx2 -DNSIPHASH=4 -DEDGEBITS=31 -DSAVEEDGES")
-  build_cpu_target("${AR2_CPU_SRC}" cuckarooz_cpu_avx2_31 "-mavx2 -DNSIPHASH=8 -DEDGEBITS=31 -DSAVEEDGES")
+ # build_cpu_target("${AR2_CPU_SRC}" cuckarooz_cpu_compat_31 "-mno-avx2 -DNSIPHASH=4 -DEDGEBITS=31 -DSAVEEDGES")
+ # build_cpu_target("${AR2_CPU_SRC}" cuckarooz_cpu_avx2_31 "-mavx2 -DNSIPHASH=8 -DEDGEBITS=31 -DSAVEEDGES")
 endif()
 
 ### AR CUDA TARGETS #########################################
