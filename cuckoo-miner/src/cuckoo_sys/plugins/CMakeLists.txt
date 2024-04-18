@@ -101,7 +101,7 @@ set (AT_MEAN_CUDA_SRC
 #if (NOT SKIP_CUCKATOO_GPU)
   build_cuda_target("${AT_MEAN_CUDA_SRC}" cuckatoo_mean_cuda_gtx_31 "-DNEPS_A=133 -DNEPS_B=85 -DPART_BITS=1 -DFLUSHA=2 -DEDGEBITS=31")
   build_cuda_target("${AT_MEAN_CUDA_SRC}" cuckatoo_mean_cuda_rtx_31 "-DNEPS_A=133 -DNEPS_B=85 -DPART_BITS=0 -DEDGEBITS=31 -arch sm_75")
-  build_cuda_target("${AT_MEAN_CUDA_SRC}" cuckatoo_extra_mean_cuda_rtx_31 "-DFLUSHA=2 -DNEPS_A=135 -DNEPS_B=88 -DPART_BITS=1 -DEDGEBITS=31")
+  #build_cuda_target("${AT_MEAN_CUDA_SRC}" cuckatoo_extra_mean_cuda_rtx_31 "-DFLUSHA=2 -DNEPS_A=135 -DNEPS_B=88 -DPART_BITS=1 -DEDGEBITS=31")
 #endif()
 
 ##################################################################################
@@ -130,7 +130,7 @@ set (AR_CPU_SRC
 set (AR_CUDA_SRC cuckoo/src/cuckaroo/mean.cu ${BLAKE_2B} )
 
 if (NOT SKIP_CUCKAROO_GPU)
-  build_cuda_target("${AR_CUDA_SRC}" cuckaroo_cuda_31 "-DEDGEBITS=31")
+  #build_cuda_target("${AR_CUDA_SRC}" cuckaroo_cuda_31 "-DEDGEBITS=31")
   
 endif()
 
@@ -161,7 +161,7 @@ set (AR2_CPU_SRC
 set (AR2_CUDA_SRC cuckoo/src/cuckarood/kernel.cuh cuckoo/src/cuckarood/photon.cu ${BLAKE_2B} )
 
 if (NOT SKIP_CUCKAROOD_GPU)
-  build_cuda_target("${AR2_CUDA_SRC}" cuckarood_cuda_31 "-DEDGEBITS=31")
+  #build_cuda_target("${AR2_CUDA_SRC}" cuckarood_cuda_31 "-DEDGEBITS=31")
 endif()
 
 ##################################################################################
@@ -194,7 +194,7 @@ set (AR2_CUDA_SRC cuckoo/src/cuckaroom/meaner.cu ${BLAKE_2B} )
 set (AR2_CUDA_SRC2 cuckoo/src/cuckaroom/kernel.cuh cuckoo/src/cuckaroom/mean.cu ${BLAKE_2B} )
 
 if (NOT SKIP_CUCKAROOM_GPU)
-  build_cuda_target("${AR2_CUDA_SRC}" cuckaroom_cuda_31 "-DEDGEBITS=31")
+  #build_cuda_target("${AR2_CUDA_SRC}" cuckaroom_cuda_31 "-DEDGEBITS=31")
 endif()
 
 ##################################################################################
@@ -226,5 +226,5 @@ endif()
 set (AR2_CUDA_SRC cuckoo/src/cuckarooz/mean.cu ${BLAKE_2B} )
 
 if (NOT SKIP_CUCKAROOZ_GPU)
-  build_cuda_target("${AR2_CUDA_SRC}" cuckarooz_cuda_31 "-DEDGEBITS=31")
+  #build_cuda_target("${AR2_CUDA_SRC}" cuckarooz_cuda_31 "-DEDGEBITS=31")
 endif()
