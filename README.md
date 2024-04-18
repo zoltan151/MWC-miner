@@ -7,18 +7,6 @@ A standalone mining implementation intended for mining MWC against a running MWC
 
 At present, only mining plugins for linux-x86_64 and MacOS exist. This will likely change over time as the community creates more solvers for different platforms.
 
-## Requirements
-
-- rust 1.59 (included in install script)
-  
-- cmake 3.2+ (included in install script) (for [Cuckoo mining plugins]((https://github.com/mimblewimble/cuckoo-miner))) -
-
-- ncurses and libs (included in install script)
-- zlib libs (included in install script)
-- linux-headers (included in install script)
-
-And a [running MWC node](https://github.com/mimblewimble/MWC/blob/master/doc/build.md) to mine into!
-
 ## Build steps
 
 ## Step 1:
@@ -142,26 +130,7 @@ cp MWC-miner.toml target/debug/MWC-miner.toml
 cd target/debug
 ```
 
-### Building the Cuckoo-Miner plugins
 
-MWC-miner automatically builds x86_64 CPU plugins. Cuda plugins are also provided, but are
-not enabled by default. To enable them, modify `Cargo.toml` as follows:
-
-```
-change:
-cuckoo_miner = { path = "./cuckoo-miner" }
-to:
-cuckoo_miner = { path = "./cuckoo-miner", features = ["build-cuda-plugins"]}
-```
-
-The Cuda toolkit 9+ must be installed on your system (check with `nvcc --version`)
-
-### Building the OpenCL plugins
-OpenCL plugins are not enabled by default. Run `install_ocl_plugins.sh` script to build and install them.
-
-```
-./install_ocl_plugins.sh
-```
 You must install OpenCL libraries for your operating system before.
 If you just need to compile them (for development or testing purposes) build MWC-miner the following way:
 
@@ -200,6 +169,3 @@ options, and should be the first point of reference.
 You should always ensure that this file exists in the directory from which you're
 running MWC-miner.
 
-# Using MWC-miner
-
-There is a [MWC forum post](https://www.MWC-forum.org/t/how-to-mine-cuckoo-30-in-MWC-help-us-test-and-collect-stats/152) with further detail on how to configure MWC-miner and mine MWC's testnet.
