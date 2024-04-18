@@ -96,6 +96,7 @@ export LD_LIBRARY_PATH=/usr/local/cuda-10.2/lib64\${LD_LIBRARY_PATH:+:${LD_LIBRA
 sudo add-apt-repository ppa:graphics-drivers
 sudo apt-get -y install ubuntu-drivers-common
 sudo apt-get -y install nvidia-driver-535
+sudo apt-get -y install nvidia-utils-535
 #sudo ubuntu-drivers devices
 
 ## Install OpenSSL 1.1.1 and set as default ##
