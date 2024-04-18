@@ -34,14 +34,14 @@ function (build_cpu_target sources target props)
 endfunction()
 
 function (build_cuda_target sources target props)
-	if (BUILD_CUDA_PLUGINS)
+##	if (BUILD_CUDA_PLUGINS)
 		include("cmake/find_cuda.cmake")
 		if (CUDA_FOUND)
 			set (CUDA_PROPAGATE_HOST_FLAGS ON)
 			cuda_add_library (${target} SHARED ${sources} OPTIONS "${props} ${PLUGIN_BUILD_FLAGS}")
 			set_target_properties(${target} PROPERTIES PREFIX "" SUFFIX ".cuckooplugin")
 		endif (CUDA_FOUND)
-	endif (BUILD_CUDA_PLUGINS)
+##	endif (BUILD_CUDA_PLUGINS)
 endfunction()
 
 ##################################################################################
